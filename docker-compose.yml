@@ -1,0 +1,39 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: payroll_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: gestion_employes
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  backend:
+    build: ./backend
+    container_name: payroll_backend
+    restart: always
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: root123
+      DB_NAME: gestion_employes
+      PORT: 5000
+    ports:
+      - "5001:5000"
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    container_name: payroll_frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  db_data:

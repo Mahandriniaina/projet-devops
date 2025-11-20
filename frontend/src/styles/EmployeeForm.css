@@ -1,0 +1,123 @@
+/* Conteneur du formulaire */
+.pret-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Titre du formulaire */
+  .pret-form h2 {
+    text-align: center;
+    color: #6c6d6d;
+    margin-bottom: 20px;
+  }
+  
+  /* Champs de saisie */
+  .pret-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .pret-form input:focus {
+    border-color: #fcfdff69;
+    outline: none;
+  }
+  
+  /* Bouton de soumission */
+  .pret-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fcfdff69;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .pret-form button:hover {
+    background-color: #fcfdff69;
+  }
+  
+  /* Style pour le bouton "Modifier" */
+  .pret-form button[type="submit"] {
+    background-color: #6c6d6d;
+  }
+  
+  .pret-form button[type="submit"]:hover {
+    background-color: #6c6d6d;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .pret-form {
+      padding: 15px;
+    }
+  
+    .pret-form input {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .pret-form button {
+      padding: 8px;
+      font-size: 14px;
+    }
+  }
+
+  .pret-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .pret-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .pret-form input:focus {
+    border-color: #fcfdff69;
+    outline: none;
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .form-actions button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .form-actions button[type="submit"] {
+    background-color: #fcfdff69;
+    color: #fff;
+  }
+  
+  .form-actions button[type="submit"]:hover {
+    background-color: #fcfdff69;
+  }
+  
+  .form-actions button[type="button"] {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  
+  .form-actions button[type="button"]:hover {
+    background-color: #c0392b;
+  }

@@ -1,0 +1,140 @@
+/* Conteneur du tableau */
+.pret-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fcfdff69;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* En-tête du tableau */
+  .pret-table th {
+    padding: 12px;
+    background-color: #6c6d6d;
+    color: #fff;
+    text-align: left;
+  }
+  
+  /* Cellules du tableau */
+  .pret-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  /* Lignes alternées */
+  .pret-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Effet de survol sur les lignes */
+  .pret-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Boutons d'action */
+  .pret-table button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .pret-table button.edit {
+    background-color: #6c6d6d;
+    color: #6c6d6d;
+  }
+  
+  .pret-table button.delete {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  
+  .pret-table button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .pret-table th, .pret-table td {
+      padding: 8px;
+    }
+  
+    .pret-table button {
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+  }
+
+  /* Conteneur du diagramme camembert */
+.pie-chart-container {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%; /* Réduire la largeur à 50% */
+    margin-left: auto;
+    margin-right: auto; /* Centrer le conteneur */
+  }
+  
+  .pie-chart-container h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  /* Réduire la taille du diagramme */
+  .pie-chart-container canvas {
+    width: 300px !important; /* Largeur du diagramme */
+    height: 300px !important; /* Hauteur du diagramme */
+    margin: 0 auto; /* Centrer le diagramme */
+  }
+
+  /* Conteneur des statistiques */
+.stats-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .stats-container h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .stats-container p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  /* Conteneur du diagramme */
+  .chart-container {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .chart-container h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  /* Réduire la taille du diagramme */
+  .chart-container canvas {
+    width: 300px !important;
+    height: 300px !important;
+    margin: 0 auto;
+  }
