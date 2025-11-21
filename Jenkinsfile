@@ -47,5 +47,19 @@ pipeline {
                 }
             }
         }
+        
+        stage('Deploy to Kubernetes') {
+            steps {
+                script {
+                    sh """
+                    ssh mahandry@192.168.250.132 '
+                        kubectl apply -f /home/mahandry/projet/k8s/backend-deployment.yaml
+                        kubectl apply -f /home/mahandry/projet/k8s/frontend-deployment.yaml
+                        kubectl apply -f /home/mahandry/projet/k8s/mysql-deployment.yaml
+                    '
+                    """
+                }
+            }
+        }
     }
 }
