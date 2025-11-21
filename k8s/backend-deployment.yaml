@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: projet
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: m0203/projet-backend:latest
+        ports:
+        - containerPort: 5000
+        env:
+        - name: DB_HOST
+          value: "mysql-service"
+        - name: DB_USER
+          value: "root"
+        - name: DB_PASSWORD
+          value: "root"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  namespace: projet
+spec:
+  selector:
+    app: backend
+  ports:
+  - port: 5000
+    targetPort: 5000
